@@ -1,0 +1,85 @@
+{
+  "env": {
+    "python": "3.12.3",
+    "os": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+    "cpu_cores_available": 1,
+    "processor": "x86_64"
+  },
+  "cpu": {
+    "records": 100000,
+    "sequential_s": 0.6074262440000027,
+    "task_parallel": [
+      {
+        "workers": 2,
+        "time_s": 1.0932047500000124,
+        "speedup": 0.5556381309173746,
+        "identical": true
+      },
+      {
+        "workers": 4,
+        "time_s": 1.106950217000005,
+        "speedup": 0.5487385382571364,
+        "identical": true
+      }
+    ],
+    "data_parallel": [
+      {
+        "workers": 2,
+        "time_s": 0.807581808000009,
+        "speedup": 0.7521544417949493,
+        "identical": true
+      },
+      {
+        "workers": 4,
+        "time_s": 0.9019745330000006,
+        "speedup": 0.6734405704113181,
+        "identical": true
+      },
+      {
+        "workers": 8,
+        "time_s": 1.1080717600000014,
+        "speedup": 0.5481831285006324,
+        "identical": true
+      }
+    ]
+  },
+  "latency": {
+    "records": 1000,
+    "db_latency_ms": 2.0,
+    "sequential_s": 2.21299255000001,
+    "threads": [
+      {
+        "workers": 2,
+        "time_s": 1.1157169449999884,
+        "speedup": 1.9834713095623306,
+        "identical": true
+      },
+      {
+        "workers": 4,
+        "time_s": 0.5458910910000014,
+        "speedup": 4.053908529531221,
+        "identical": true
+      },
+      {
+        "workers": 8,
+        "time_s": 0.3551038690000041,
+        "speedup": 6.231958430168453,
+        "identical": true
+      },
+      {
+        "workers": 16,
+        "time_s": 0.1423790629999928,
+        "speedup": 15.542963293698046,
+        "identical": true
+      }
+    ]
+  },
+  "consistency": {
+    "records": 20000,
+    "rows_written": 20000,
+    "distinct_ids": 20000,
+    "cache_hits": 15000,
+    "cache_misses": 5000,
+    "spot_checks_match": true
+  }
+}
